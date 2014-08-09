@@ -18,18 +18,18 @@ par(mfrow=c(2,2))
 #Plot 1
 par(yaxt="n")
 plot(hpcdata$Date,hpcdata$Global_active_power,type="l",
-     ylim=c(0,8),ylab="Global Active Power (kilowatts)",xlab="",cex.axis=0.8,cex.lab=0.8)
+     ylim=c(0,8),ylab="Global Active Power (kilowatts)",xlab="")
 par(yaxt="s")
 axis(2,at=c(0,2,4,6),lwd=2)
 
 #Plot 2
 plot(hpcdata$Date,hpcdata$Voltage,type="l",
-xlab="datetime",ylab="Voltage",cex.axis=0.8,cex.lab=0.8)
+xlab="datetime",ylab="Voltage")
 
 #plot 3
 par(yaxt="n")
 plot(hpcdata$Date,hpcdata$Sub_metering_3,type="l",col="blue",
-     xlab="",ylab="Energy sub metering",ylim=c(0,40),cex.axis=0.8,cex.lab=0.8)
+     xlab="",ylab="Energy sub metering",ylim=c(0,40))
 box(which="plot",lty="solid")
 lines(hpcdata$Date,hpcdata$Sub_metering_1,type="l")
 lines(hpcdata$Date,hpcdata$Sub_metering_2,type="l",col="red")
@@ -39,6 +39,6 @@ axis(2,at=c(0,10,20,30),lwd=2)
 
 #plot 4
 plot(hpcdata$Date,hpcdata$Global_reactive_power,type="l",
-xlab="datetime",ylab="Global reactive power",cex.axis=0.8,cex.lab=0.8)
+xlab="datetime",ylab="Global reactive power")
 
 dev.off()
